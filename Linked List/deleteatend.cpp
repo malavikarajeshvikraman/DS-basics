@@ -47,15 +47,19 @@ void display()
   cout<<"\n"<<tmp->data;
 }
 
-void deleteatbeg()
+void insertatend()
 {
+  struct node *tmp1;
   struct node *tmp;
   int num;
-  cout<<"\n The number being deleted is  : "<<head->data;
   tmp=head;
-  head=head->next;
-  free(tmp);
-  
+  while((tmp->next)->next!=NULL)
+  {
+    tmp=tmp->next;
+  }
+  tmp1=tmp->next;
+  free(tmp1);
+  tmp->next=NULL;
 }
 
 int main(){
@@ -63,7 +67,7 @@ int n;
 cout<<"Enter the number of nodes ";
 cin>>n;
 createlist(n);
-deleteatbeg();
+insertatend();
 display();
 
 

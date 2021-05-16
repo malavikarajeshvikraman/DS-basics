@@ -47,23 +47,30 @@ void display()
   cout<<"\n"<<tmp->data;
 }
 
-void deleteatbeg()
+void deleteatnth(int pos)
 {
+  struct node *tmp1 ;
   struct node *tmp;
-  int num;
-  cout<<"\n The number being deleted is  : "<<head->data;
   tmp=head;
-  head=head->next;
-  free(tmp);
+  for(int i=1;i<pos-1;i++)
+  {
+    tmp=tmp->next;
+    cout<<"\n"<<tmp->next;
+  }
+  tmp1=tmp->next;
+  tmp->next=(tmp->next)->next;
+  free(tmp1);
   
 }
 
 int main(){
-int n;
+int n,pos;
 cout<<"Enter the number of nodes ";
 cin>>n;
 createlist(n);
-deleteatbeg();
+cout<<"Enter the positon at which new element is to be deleted";
+cin>>pos;
+deleteatnth(pos);
 display();
 
 
