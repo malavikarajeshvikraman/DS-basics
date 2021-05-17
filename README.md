@@ -1,5 +1,5 @@
 # DS-basics
 
 ## Data Structures 
-> Linked List
-> Arrays
+*  Linked List
+*  Arrays
