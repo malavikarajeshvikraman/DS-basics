@@ -18,3 +18,6 @@ Equivalent to slicing in python
 unordered map in C++
 #include <unordered_map>
  unordered_map<string, int> umap;
+
+Remove a character from a string
+ s.erase(std::remove(s.begin(), s.end(), a), s.end());

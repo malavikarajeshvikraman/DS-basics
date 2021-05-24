@@ -3,3 +3,4 @@
 ## Data Structures 
 *  Linked List
 *  Arrays
+*  Strings
