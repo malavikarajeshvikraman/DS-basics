@@ -18,7 +18,7 @@
  9. Majority Sum  
  10. **Max Consecutive Ones**
  11. **Sort an array of 0s, 1s and 2s**
- 13. 
+ 13. **Kth largest and minimum using sorting (have to learn using heaps)** 
 
 
 ## Medium Questions:
