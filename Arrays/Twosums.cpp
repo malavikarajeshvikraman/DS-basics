@@ -18,3 +18,26 @@ public:
         return result;
     }
 };
+
+
+//User function template for C++
+class Solution{
+public:	
+	// Function to check if array has 2 elements
+	// whose sum is equal to the given value
+	bool hasArrayTwoCandidates(int arr[], int n, int x) {
+	    unordered_set <int> r;
+	    for(int i =0;i<n;i++)
+	    {
+	        int temp = x- arr[i];
+	        if(r.find(temp)!=r.end())
+	        {
+	            return true;
+	        }
+	        else {
+	        r.insert(arr[i]);
+	        }
+	    }
+	    return false;
+	}
+};
