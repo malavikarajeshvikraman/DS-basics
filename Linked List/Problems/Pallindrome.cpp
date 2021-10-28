@@ -38,3 +38,50 @@ public:
         
     
 };
+
+
+class Solution {
+public:
+    bool isPalindrome(ListNode* head) {
+    if(head==NULL || head->next ==NULL)
+            return true;
+        
+    ListNode *slow = head , *fast =head;
+    while(fast!=NULL && fast->next!=NULL)
+    {
+        slow=slow->next;
+        fast=fast->next->next;
+    }
+     bool odd;
+    if(fast)
+       odd=true;
+    else
+       odd=false;  
+    ListNode *prev=NULL,*cur=head,*tmp;
+    while (cur!=slow)
+    {  
+        tmp=cur->next;
+        cur->next=prev;
+        prev=cur;
+        cur=tmp;
+    }
+    head->next=slow;
+    head= prev;
+    tmp=head;
+      if(odd)
+    {
+        slow=slow->next;
+    }
+    while(slow!=NULL)
+    {  
+        if(tmp->val!=slow->val)
+              return false;
+        cout<<slow->val<<" "<<tmp->val;
+        tmp=tmp->next;
+        slow=slow->next;
+    }
+      
+return true;
+    }
+    
+};
